@@ -1,115 +1,77 @@
-<html>
+<html lang="en">
 <head>
-  <title>Simple Chat</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    
-    #messages {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      height: 400px;
-      overflow-y: auto;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    .message {
-      margin: 8px 0;
-      padding: 8px;
-      border-radius: 4px;
-      background: #f0f0f0;
-    }
-
-    .message .username {
-      font-weight: bold;
-      margin-right: 8px;
-    }
-
-    .message .time {
-      color: #666;
-      font-size: 0.8em;
-    }
-
-    #input-area {
-      display: flex;
-      gap: 8px;
-    }
-
-    #message-input {
-      flex: 1;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      padding: 8px 16px;
-      background: #0066ff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0052cc;
-    }
-  </style>
+    <metaa charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varelheim Motive Trains Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div id="messages"></div>
-  <div id="input-area">
-    <input type="text" id="message-input" placeholder="Type a message...">
-    <button onclick="sendMessage()">Send</button>
-  </div>
+    <header>
+        <div class="logo-container">
+            <img src="/New Project (1).png" alt="Varelheim Motive Trains Studios Logo" class="logo">
+        </div>
+    </header>
 
-  <script type="module">
-    const room = new WebsimSocket();
-    const messagesDiv = document.getElementById('messages');
-    const messageInput = document.getElementById('message-input');
+    <div class="content">
+        <h1>Varelheim Train Simulator</h1>
+        <p>A Roblox game inspired by Rerailed - Currently in development</p>
+        
+        <!-- New Game Features Section -->
+        <section id="game-features">
+            <h2>Game Features</h2>
+            <div class="features-container">
+                <div id="core-features"></div>
+                <div id="environments"></div>
+            </div>
+        </section>
+    </div>
 
-    // Load existing messages
-    room.collection('message').subscribe(messages => {
-      messagesDiv.innerHTML = '';
-      // Reverse to show newest messages at the bottom
-      messages.reverse().forEach(msg => {
-        const messageEl = document.createElement('div');
-        messageEl.className = 'message';
-        const time = new Date(msg.created_at).toLocaleTimeString();
-        messageEl.innerHTML = `
-          <span class="username">${msg.username}</span>
-          <span class="time">${time}</span>
-          <div>${msg.text}</div>
-        `;
-        messagesDiv.appendChild(messageEl);
-      });
-      // Scroll to bottom
-      messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    });
+    <section id="application-form">
+        <div class="container">
+            <h2>Apply to Test the Game</h2>
+            <form id="tester-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Roblox Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="userid">Roblox User ID:</label>
+                    <input type="text" id="userid" name="userid" required>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Previous Testing Experience:</label>
+                    <textarea id="experience" name="experience" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit Application</button>
+            </form>
+        </div>
+    </section>
 
-    // Send message function
-    window.sendMessage = async () => {
-      const text = messageInput.value.trim();
-      if (!text) return;
-      
-      await room.collection('message').create({
-        text: text
-      });
-      
-      messageInput.value = '';
-    };
+    <footer>
+        <div class="container">
+            <div class="links-container">
+                <a href="https://github.com/hujowe-serwery/VMT-Studios-Pages" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i> GitHub Repository
+                </a>
+            </div>
+            <div class="subdomain-container">
+                <p>Register your own subdomain at: <a href="https://register-site.local-domain.online" target="_blank">register-site.local-domain.online</a></p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Varelheim Motive Trains Studios. All Rights Reserved.</p>
+                <p>This is a fan-made website. Not affiliated with Roblox Corporation or Rerailed.</p>
+            </div>
+        </div>
+    </footer>
 
-    // Listen for enter key
-    messageInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        sendMessage();
-      }
-    });
-  </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
