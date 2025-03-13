@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #ff6b00;
+    --text-color: #f0f8ff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    height: 200px;
+    border-radius: 50%;
+}
+
+.content {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: auto;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+#application-form {
+    padding: 50px 0;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #ff8533;
+}
+
+#game-features {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 8px;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.feature-title {
+    color: var(--accent-color);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.feature-section {
+    margin-bottom: 30px;
+}
+
+.feature-section h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+.environment-tag {
+    display: inline-block;
+    background-color: #333;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.multiplayer-info {
+    margin-top: 10px;
+}
+
+.multiplayer-role {
+    display: inline-block;
+    background-color: #444;
+    color: var(--accent-color);
+    padding: 3px 8px;
+    margin: 3px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.links-container {
+    margin-bottom: 15px;
+}
+
+.social-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #ff8533;
+}
+
+.subdomain-container {
+    margin-bottom: 15px;
+}
+
+.subdomain-container a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.subdomain-container a:hover {
+    color: #ff8533;
+    text-decoration: underline;
+}

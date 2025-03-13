@@ -1,0 +1,16 @@
+{
+  "name": "Varelheim Train Simulator",
+  "developer": "Varelheim Motive Trains Studios",
+  "inspired_by": "Rerailed",
+  "description": "A Roblox game featuring trains with procedurally generated terrain and realistic railway systems.",
+  "status": "In Development",
+  "platform": "Roblox",
+  "key_concepts": [
+    "Moving terrain generation",
+    "Dynamic train systems",
+    "Passenger management",
+    "Railway infrastructure"
+  ],
+  "development_started": "2023",
+  "estimated_release": "TBD"
+}

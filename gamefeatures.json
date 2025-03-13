@@ -1,0 +1,43 @@
+{
+  "core_features": [
+    {
+      "name": "Procedural Terrain",
+      "description": "Randomized and dynamically generated terrain that creates unique routes each time"
+    }
+  ],
+  "train_types": [
+    {
+      "name": "Commuter Train",
+      "description": "Fast passenger train for urban areas",
+      "max_speed": 160
+    },
+    {
+      "name": "Freight Train",
+      "description": "Heavy-duty train for cargo transport",
+      "max_speed": 120
+    },
+    {
+      "name": "Mountain Train",
+      "description": "Specialized train for steep gradients",
+      "max_speed": 100
+    }
+  ],
+  "environments": [
+    "Urban",
+    "Rural",
+    "Mountains",
+    "Desert",
+    "Coastal",
+    "Snow"
+  ],
+  "multiplayer_features": {
+    "enabled": true,
+    "max_players": 20,
+    "roles": [
+      "Train Driver",
+      "Station Manager",
+      "Dispatcher",
+      "Passenger"
+    ]
+  }
+}
