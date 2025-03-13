@@ -23,11 +23,6 @@
     }
   ],
   "environments": [
-    "Urban",
-    "Rural",
-    "Mountains",
-    "Desert",
-    "Coastal",
     "Snow"
   ],
   "multiplayer_features": {
